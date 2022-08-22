@@ -2,6 +2,13 @@
     font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
+:root{
+    --color-one: #c0392b;
+    --color-two: #f1c40f;
+    --color-three: #64fcfe;
+    --color-four: #2ecc71;
+}
+
 body{
     height: 90vh;
     display: flex;
@@ -23,10 +30,14 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    min-width: 860px;
+    max-width: 860px;
+    min-height: 239px;
+    max-height: 239px;
 }
 
 .lights_container{
-    height: 60%;
+    height: 40%;
     width: 99%;
     background-color: rgb(73, 73, 73);
     display: flex;
@@ -80,29 +91,29 @@ body{
 }
 
 .red{
-    background-color: #c0392b;
+    background-color: var(--color-one);
     animation: glow-1 5s infinite; 
 }
 
 .yellow {
-    background-color: #f1c40f;
+    background-color: var(--color-two);
     animation: glow-2 5s infinite;
 }
   
 .blue {
-    background-color: #64fcfe;
+    background-color: var(--color-three);
     animation: glow-3 5s infinite;
 }
   
 .green {
-    background-color: #2ecc71;
+    background-color: var(--color-four);
     animation: glow-4 5s infinite;
 }
 
 @keyframes glow-1{
     0%,
     100% {
-      box-shadow: 0 0 20px 5px #c0392b;
+      box-shadow: 0 0 20px 5px var(--color-one);
     }
     50% {
       box-shadow: none;
@@ -115,14 +126,14 @@ body{
       box-shadow: none;
     }
     50% {
-      box-shadow: 0 0 20px 5px #f1c40f;
+      box-shadow: 0 0 20px 5px var(--color-two);
     }
 }
   
 @keyframes glow-3 {
     0%,
     100% {
-        box-shadow: 0 0 20px 5px #74f7e1;
+        box-shadow: 0 0 20px 5px var(--color-three);
     }
     50% {
         box-shadow: none;
@@ -135,8 +146,26 @@ body{
         box-shadow: none;
     }
     50% {
-        box-shadow: 0 0 20px 5px #2ecc71;
+        box-shadow: 0 0 20px 5px var(--color-four);
     }
+}
+
+.colors_container{
+    height: 15%;
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.color{
+    border: 2px solid #353333;
+    background-color: #808080;
+    border-radius: 2mm;
+    height: 5mm;
+    padding: 0;
 }
 
 .ops_container{

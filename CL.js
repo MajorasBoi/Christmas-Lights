@@ -1,6 +1,10 @@
 const button = document.querySelector(".player");
 const len = document.querySelectorAll(".light");
 const slider = document.querySelector(".slider");
+const color1 = document.querySelector(".one");
+const color2 = document.querySelector(".two");
+const color3 = document.querySelector(".three");
+const color4 = document.querySelector(".four");
 
 const on = function(){
     for(i=0; i< len.length;i++){
@@ -37,4 +41,20 @@ button.addEventListener("click", (e)=>{
         button.innerHTML = "Play";
         off();
     }
+});
+
+color1.addEventListener("input", (e)=>{
+    document.documentElement.style.setProperty('--color-one', color1.value);
+});
+
+color2.addEventListener("input", (e)=>{
+    document.documentElement.style.setProperty('--color-two', color2.value);
+});
+
+color3.addEventListener("input", (e)=>{
+    document.documentElement.style.setProperty('--color-three', color3.value);
+});
+
+color4.addEventListener("input", (e)=>{
+    document.documentElement.style.setProperty('--color-four', color4.value);
 });
